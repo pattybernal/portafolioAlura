@@ -1,0 +1,823 @@
+body {
+	width: 100%;
+}
+
+/*ESTILOS PARA EL HEADER*/
+
+.header {
+    background: rgb(133, 133, 143);
+	box-shadow: 0px 4px 4px 2px rgba(116, 113, 113, 0.8);
+	width: 100%;
+	height: 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	position: fixed;
+	z-index: 999;
+	color: #e0e0d6;
+	border: #323031;
+}
+
+.header_logo {
+	width: 55px;
+	height: 55px;
+	margin: 20px auto 20px 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.header_nombre {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.header_menu {
+	display: flex;
+	margin-right: 40px;
+	flex-wrap: wrap;   
+}
+
+.header_items {
+    margin: 20px;
+    list-style: none;
+}
+
+.header_links {
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgb(243, 239, 239);    
+}
+
+.header_links:hover {
+    color: #530ff0;      
+}
+
+@media screen and (max-width:1024px) {
+	.header_menu, .header_items {
+        display: none;
+    }
+    .header_menu, .header_items:last-child, .header_items:nth-child(5) {
+        display: block;
+	}
+	.header_links, .header_items {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.logo {
+		position: relative;
+		margin-right: 20px;	
+	}
+	.header_menu {
+        display: none;
+    }
+	.header_nombre {
+		font-size: 20px;
+	}
+    .header_logo {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/*ESTILOS PARA BANNER*/
+.banner {
+	width: 100%;
+	overflow-x: hidden;
+	box-shadow: 0px 4px 4px 2px rgba(116, 113, 113, 0.8);
+}
+
+/*ESTILOS PARA INICIO*/
+.inicio {
+	
+	height: 450px;
+	display: flex;
+	align-items: center;
+    background: linear-gradient(#FEFEFE, #9d9da0);
+}
+
+.inicio_info {
+	
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	height: 80%;
+	margin: auto 50px auto 50px;
+}
+
+.inicio_titulo {
+	font-family: "Montserrat" , sans-serif;
+	font-weight: 700;
+	font-size: 3rem;
+    margin: 0 70px;
+}
+
+.inicio_texto {
+	font-family: "Montserrat", sans-serif;
+	font-size: 2rem;
+	line-height: 1.1rem;
+	margin-top: .5rem ;
+	margin-bottom: 5px;
+	margin-left: 60px;
+}
+
+.inicio_presentacion {
+    font-family: "Montserrat", sans-serif;
+	font-size: 20px;
+	line-height: 1.1rem;
+	margin-top: 2rem;
+	margin-bottom: 10px;
+}
+
+.inicio_lista {
+	display: flex; /*coloca los elementos de la lista en linea*/
+	margin-top: 5rem;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.inicio_items {
+    margin-right: 15px;
+	margin-left: 15px;
+    list-style: none;
+}
+
+.imgGithub, .imgLinkedin, .imgInstagram, .imgFacebook {
+	width: 3vh;  /*equivale al %, pero así me lo deja en linea*/   
+}
+
+.inicio_links {
+    text-decoration: none;
+    font-family: "Montserrat" , sans-serif;
+    font-weight: 500;
+    color: rgb(103, 107, 106);
+}
+
+.inicio_links:hover {
+	font-weight: 700;
+	text-decoration:underline;
+	color: rgb(0, 0, 0);
+}
+
+.btn-curriculo {
+	display: block;
+	border-radius: 5px;
+	background-color: #307cec;
+    color: #fff;
+	font-weight: 600;
+    padding: 10px;
+	font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+    margin: 30px auto;
+    transition: all 0.5s;
+	margin: 50px 50px auto 300px;
+	transition: 1s all;
+	box-shadow: 2px 5px 7px 0px rgba(0, 0, 0, 0.8);
+}
+
+.btn-curriculo:hover {  /*para que alumbre el boton al pasar el mause*/
+    transform: scale(1.1);
+	background: #656dad;
+    color: rgb(22, 22, 22);
+}
+
+.inicio_foto {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-top: 30px; 
+    margin-right: 150px;
+    margin-bottom: 40px;
+    box-shadow: 10px 10px 30px 15px #000000;
+}
+
+@media screen and (max-width:1024px) {
+
+	.inicio {
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 100%;
+		height: 800px;
+		display: flex;
+		align-items: center;
+		background: linear-gradient(#FEFEFE, #9d9da0);
+	}
+
+	.inicio_foto {
+		max-width: 30%;  /*max- para cambiar el tamaño de la imagen*/
+		max-height: 20%;
+		margin: 30px;
+		order: -1;	
+	}
+
+	.inicio_info {
+		width: 100%;
+		margin: 0;
+		margin-top: 100px;
+		justify-content: center;
+	}
+
+	.inicio_titulo {
+		position: absolute;
+		font-size: 25px;
+		margin-bottom: 800px;
+	}
+
+	.inicio_texto {
+		position: absolute;
+		font-size: 20px;
+		margin-bottom: 700px;
+		margin-left: auto;
+	}
+
+	.inicio_presentacion {
+		position: absolute;
+		width: 70%;
+		margin-bottom: 600px;
+		margin-left: 50px;
+		font-size: 15px;
+	}
+
+	.inicio_lista {
+		display: block;
+		margin-left: 400px;
+		margin-bottom: 200px;
+	}
+
+	.inicio_items {
+		margin-top: 15px;
+	}
+
+	.btn-curriculo {
+		position: relative;
+		margin-left: 0;
+		margin-right: 400px;
+		margin-bottom: 20px;
+	}	
+}
+
+@media screen and (max-width:480px) {
+	.inicio_foto {
+		width: 100%;
+		border: 15px double black;
+	}
+	.inicio_titulo {
+		text-align: center;
+	}
+}
+
+
+/*ESTILOS PARA INFORMACIÓN SOBRE MI*/
+.sobre_mi {
+	
+	padding: 1em 0;
+	height: 600px;
+    margin: 0 auto; 
+	background: linear-gradient(#b2c8ef, #9999a0);
+}
+
+.about_title {
+	text-align: center;
+	font-weight: bold;
+    font-size: 3rem;
+    padding: 20px;
+}
+
+.presentacion {
+	position: relative;
+	font-family: "Montserrat", sans-serif;
+	color: #000000;
+	font-size: 1rem;
+	margin-right: 80px;	
+}
+
+.about_img {
+	width: 200px;
+    float: left;
+    margin-bottom: 200px;
+	padding: 20px;	
+}
+
+.personal_info {
+	display: flex;
+    margin: 50px; 
+}
+
+.personal_datos {
+	width: 60%;
+}
+
+.personal_datos ul {
+	width: 45%;
+}
+
+#b {
+	font-size: 2em;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.personal_item {
+	display: inline; 
+    margin: 0 0 10px 0;
+	
+}
+
+.personal_item-1 {
+	font-weight: bold;
+	font-size: larger;
+    width: 30vh;
+	padding-top: 15px;	
+}
+
+.personal_item-2 {
+	font-size: large;
+}
+
+@media screen and (max-width:1024px) {
+	.sobre_mi {
+		height: 100%;		
+	}
+
+	.about_title {
+		font-size: 2rem;
+	}
+
+	.about_img {
+		position: relative;
+		width: 150px;
+		margin: 0%;
+		float: initial;
+	}
+
+	.presentacion {
+		margin-left: 70px;
+		text-align: initial;
+	}
+
+	.personal_item-1 {
+		position: relative;		
+	}	
+}
+
+/*ESTILOS PARA SKILLS Y HOBBIES*/
+
+#hardSkills, #softSkills, #hobbies {
+	padding: 1em 0;
+    margin: 0 auto; 
+	
+	
+}
+
+#hardSkills {
+	background: linear-gradient(#cccbcb, #85858a);
+	height: 550px;
+}
+
+#softSkills {
+	position: relative;
+	background-color: #85858a;
+	height: 250px;
+	margin-top: 0;
+}
+
+#hobbies {
+	position: relative;
+	background: linear-gradient(#85858a, #5d5d61);
+	height: 200px;
+	margin-top: 0;
+}
+
+
+.skills_titulo, .hobbies_titulo {
+    font-family: "Montserrat" , sans-serif;
+	font-weight: 750;
+	font-size: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.skills_lista, .hobbies_lista {
+	width: 85%;
+	margin: 30px 7.5%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.skills_item, .hobbies_item {
+	max-width: 80px;
+	border-radius: 15%;
+	margin: 20px;
+	padding: 10px;
+	background-color: rgb(66, 64, 71);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: all 200ms;
+}
+
+.skills_item:hover, .hobbies_item:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    transform: scale(1.1, 1.1);
+    filter: invert(100%);     /*invierte el color al complementario*/
+}
+
+.skills_nombre, .hobbies_nombre {
+    font-family: "Montserrat" , sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+	font-weight: bold;
+}
+
+.skills_imagen,  .hobbies_imagen {
+	width: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+	#hardSkills  {
+		height: 800px;	
+	}
+
+	#softSkills{
+		height: 500px;
+	}
+
+	#hobbies {
+		height: 400px;
+
+	}
+	.skills_item,  .hobbies_item {
+		width: 100%;
+	}
+	.skills_nombre, .hobbies_nombre {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width:480px) {
+	#hardSkills  {
+		height: 500px;
+	}
+	#softSkills, #hobbies {
+		height: 300px;
+	}
+	.skills_item, .hobbies_item {
+		width: 15%;
+		height: 80px;
+		margin: 5px;
+	}
+	.skills_item:hover, .hobbies_item:hover{
+		transform: scale(1, 1);
+	}
+}	
+
+
+/* ESTILOS PARA FORMACION*/
+#formacion {
+	background: linear-gradient(#bebed3, #9999a0);
+	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.formacion_titulo {
+	padding: 10px;
+	margin-top: 30px;
+	color: #000000;
+	font-family: "Montserrat" , sans-serif;
+	font-weight: 750;
+	font-size: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contenedor_formacion {
+	margin: auto; /*para centrar los elementos*/
+	display: flex; /*elementos uno al lado del otro*/
+    flex-wrap: wrap; /*para que sea responsive y ponga las cards una debajo de otra*/
+    justify-content: center; /*centrar las cards en el centro del contenedor*/
+}
+
+.formacion_card {
+	width: 20%;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
+    background: rgba(175, 176, 177, 0.712);
+    border-left: 3px solid  rgba(255, 255, 255, 0.5) ;
+    border-top: 2px solid  rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+}
+.formacion_card:hover {
+	border-color:#485a96;
+}
+.formacion_card:active {
+	border-color:#088c19;
+}
+
+.formacion_imagen {
+	width: 100%;
+	display: flex;
+    height: 150px; 
+}
+
+.card_imagen {
+	width: 70%;
+	margin: 1em; 
+}
+
+.card_titulo {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.3rem;
+	color: #323031;
+	font-weight: 600;
+	margin-bottom: 1.25em; 
+}
+
+.card_titulo:hover {
+	font-size: 30px;
+}
+
+.card_texto {
+	font-size: 1.1rem;
+	line-height: 1.40em;
+	margin-bottom: 2em; 
+}
+
+
+@media screen and (max-width:1200px) {   /*para que no corte las cards al hacer el responsive*/
+    #formacion {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+
+/*ESTILOS PARA PROYECTOS*/
+#proyectos {
+	background: linear-gradient(#a7a7b8, #e1e1f5);
+	margin: auto;
+	display: flex;
+	align-items: center;
+	flex-direction: column; 
+}
+
+.proyectos_titulo {
+	padding: 10px;
+	margin-top: 60px;
+	color: #000000;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-weight: 900;
+	font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.proyecto_card {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5em;
+	border-bottom: 2px dotted #555;
+	margin-bottom: 1.5em; }
+
+.img_card{
+	width: 50%;
+	margin-left: 100px;
+	display: flex; 
+	border-radius: 10px;
+	box-shadow: 2px 5px 7px 0px rgba(0, 0, 0, 0.8); }
+
+.proyecto_contenido {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	margin: 1em;
+	margin-right: 200px;
+	align-items: center;
+	text-align: center; }
+
+.proyecto_titulo {
+	font-size: 25px;
+	color: #323031;
+	font-weight: 600;
+	margin-bottom: 1em; }
+
+.proyecto_descripcion {
+	font-size: 1.2rem;
+	line-height: 1.25em;
+	margin-bottom: 1em;
+	font-weight: lighter; }
+
+.proyecto_botones {
+	display: flex;
+	flex-direction: column;
+	margin: 1.5em 0; }
+
+.boton_demo {
+	padding: 10px 1.5em;
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: 700;
+	background: rgb(103, 140, 240);
+	border: 1px solid #323031;
+	border-radius: 5px;
+	margin-bottom: 1em;
+	transition: 1s all;
+	box-shadow: 2px 5px 7px 0px rgba(0, 0, 0, 0.8); }
+
+.boton_demo:hover {
+	transform: scale(1.1);
+	background: #e4b982;
+    color: rgb(22, 22, 22);
+}
+
+.boton_repo{
+	padding: 10px 1.5em;
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: 700;
+	background: rgb(50, 170, 150);
+	border: 1px solid #323031;
+	border-radius: 5px;
+	margin-bottom: 1em;
+	transition: 1s all;
+	box-shadow: 2px 5px 7px 0px rgba(0, 0, 0, 0.8); }
+
+.boton_repo:hover {
+	transform: scale(1.1);
+	background: #ecc680;
+	color: #000000;
+	
+}
+.proyecto_contenedor_card .contenido--grande {
+	width: 100%; }
+
+
+/*ESTILOS PARA FORMULARIO*/
+.formulario {
+	background: linear-gradient(#9898b9, #b8b8c2);
+	padding: 1.5em; 
+	
+}
+.formulario_titulo {
+	font-family: 'Montserrat' , sans-serif;
+	margin-top: 40px;
+	padding: 10px;
+	text-transform: uppercase;
+}
+
+.formulario_contenedor {
+	width: 90%;
+	max-width: 1100px;
+	margin: auto;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column; 
+}
+
+.formulario_nombre {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 1.3rem; 
+}
+
+.formulario_contenedor .formulario_nombre .formulario_titulo {
+	font-size: 1.5em;
+	font-weight: 600; 
+}
+
+.formulario_contenido {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 1.5em; 
+}
+
+.formulario_imagen {
+	width: 350px;
+	display: flex;
+}
+
+.formulario_datos {
+	width: 50%;
+	display: flex;
+	flex-direction: column; 
+}
+
+.formulario_label {
+		width: 80%;
+		font-size: 25px;
+		margin: 0 1em;
+		padding: 1rem 0; 
+}
+
+.formulario_item {
+		width: 80%;
+		height: 10%;
+		font-size: 1.1rem;
+		max-width: auto;
+		max-height: auto;
+		margin: 0 1em;
+		padding: .5em;
+		background: #F4F3EE;
+		color: #323031;
+		border: 0.5px solid #323031; 
+}
+
+.boton-enviar {
+	display: block;
+	border-radius: 5px;
+	background-color: #307cec;
+    color: #fff;
+	font-weight: 600;
+    padding: 10px;
+	font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+    margin: 30px auto;
+    transition: all 0.5s;
+	margin: 50px 50px auto 300px;
+	transition: 1s all;
+	box-shadow: 2px 5px 7px 0px rgba(0, 0, 0, 0.8);
+}
+
+.boton-enviar:hover {  /*para que alumbre el boton al pasar el mause*/
+    transform: scale(1.1);
+	background: #656dad;
+    color: rgb(22, 22, 22);
+}
+
+.formulario_error {
+	background: #323031;
+	border-radius: 3px;
+	color: #fff;
+	display: none;
+	font-weight: lighter;
+	line-height: 1.5rem;
+	font-size: 0.9rem;
+	justify-content: center;
+	margin-top: 20px;
+	width: 70%;
+	margin: 1rem auto;
+	padding: .5rem; 
+}
+
+
+/*ESTILOS PARA EL FOOTER*/
+.footer{
+	padding: 20px 0;
+	background-color: #5d5d61;
+}
+
+.footer_contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_nombre{
+    font-size: 20px;
+	color: rgb(255, 255, 255);
+    font-family: "Montserrat" , sans-serif;
+    margin: 0 15px;
+}
+
+.footer_logo{
+    width: 25px;
+    height: 25px;
+    margin: 0 5px; 
+}
+
+.footer_logo:hover {
+	transform: scale(1.5);
+}
+
+@media screen and (max-width: 480px) {
+
+    .footer_contenedor {
+        flex-wrap: wrap;
+    }
+
+    .footer_logos {
+        margin-top: 10px;
+    }
+    
+}
+
+
